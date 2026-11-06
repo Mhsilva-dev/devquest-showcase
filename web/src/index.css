@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: #07070e;
+  color: #e9e9f2;
+  font-family: "Plus Jakarta Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  letter-spacing: -0.009em;
+}
+
+/* Títulos com cara de produto premium */
+h1, h2, h3, h4, .font-display {
+  font-family: "Sora", "Plus Jakarta Sans", sans-serif;
+  letter-spacing: -0.025em;
+}
+h1 { font-weight: 700; }
+code, pre, .font-mono, pre code { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+/* Brilho bem discreto no título, só para dar vida */
+.glow-text { text-shadow: 0 0 14px rgba(167,139,250,0.25); }
+
+/* Rótulos de seção em caixa alta, elegantes */
+.eyebrow { font-family: "Sora", sans-serif; text-transform: uppercase; letter-spacing: 0.18em; font-size: 0.68rem; font-weight: 600; color: #a78bfa; }
+
+/* Cartões com um realce de borda no hover */
+.card { transition: border-color .2s ease, transform .2s ease, background .2s ease; }
+.card-hover:hover { transform: translateY(-2px); border-color: rgba(167,139,250,0.4); }
+
+/* Fundo com brilho suave estilo "mapa" */
+.aurora {
+  background:
+    radial-gradient(60rem 60rem at 10% -10%, rgba(139,92,246,0.18), transparent 60%),
+    radial-gradient(50rem 50rem at 110% 10%, rgba(236,72,153,0.14), transparent 55%),
+    radial-gradient(50rem 50rem at 50% 120%, rgba(34,211,238,0.12), transparent 55%);
+}
+
+.card { background: rgba(18,18,28,0.55); border: 1px solid rgba(255,255,255,0.08); border-radius: 1rem; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.prose-dq h2 { font-family: "Sora", sans-serif; font-size: 1.2rem; font-weight: 700; margin: 1.2em 0 .5em; color: #fff; letter-spacing: -0.02em; }
+.prose-dq h3 { font-family: "Sora", sans-serif; font-size: 1.02rem; font-weight: 600; margin: 1em 0 .4em; color: #ddd6fe; }
+.prose-dq p { margin: .6em 0; line-height: 1.7; }
+.prose-dq ul { margin: .5em 0; padding-left: 1.2em; list-style: disc; }
+.prose-dq li { margin: .3em 0; line-height: 1.6; }
+.prose-dq code { background: rgba(255,255,255,0.08); padding: .1em .35em; border-radius: .3em; font-size: .9em; }
+.prose-dq pre { background: #11111b; border: 1px solid rgba(255,255,255,0.08); border-radius: .6rem; padding: 1rem; overflow-x: auto; margin: .8em 0; }
+.prose-dq pre code { background: none; padding: 0; }
+.prose-dq table { width: 100%; border-collapse: collapse; margin: .8em 0; font-size: .92em; }
+.prose-dq th, .prose-dq td { border: 1px solid rgba(255,255,255,0.1); padding: .5em .7em; text-align: left; }
+.prose-dq th { background: rgba(255,255,255,0.05); }
+.prose-dq blockquote { border-left: 3px solid #8b5cf6; padding-left: 1em; margin: .8em 0; color: #c4b5fd; }
+.prose-dq strong { color: #fff; }
+
+@keyframes pop { 0% { transform: scale(.8); opacity: 0 } 100% { transform: scale(1); opacity: 1 } }
+.pop { animation: pop .25s ease-out; }

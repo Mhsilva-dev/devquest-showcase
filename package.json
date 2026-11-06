@@ -1,0 +1,17 @@
+{
+  "name": "devquest",
+  "private": true,
+  "type": "module",
+  "workspaces": ["shared", "server", "web"],
+  "overrides": {
+    "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7"
+  },
+  "scripts": {
+    "dev:server": "npm -w server run dev",
+    "dev:web": "npm -w web run dev",
+    "build": "npm -w web run build",
+    "typecheck": "npm -w server run typecheck && npm -w web run typecheck",
+    "start": "npm -w server run start"
+  }
+}
